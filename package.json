@@ -1,0 +1,20 @@
+{
+  "name": "barcodes",
+  "version": "1.0.0",
+  "description": "Barcode Reader",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "postinstall": "electron-rebuild --force"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^4.0.1",
+    "electron-rebuild": "^1.8.2"
+  },
+  "dependencies": {
+    "node-hid": "^0.7.6",
+    "usb-barcode-scanner": "^1.0.2"
+  }
+}
