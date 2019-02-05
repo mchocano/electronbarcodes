@@ -8,7 +8,7 @@ let vendorId = 1504
 let productId = 4864
 let barcodeFound = null;
 
-//var device = new HID.HID(vendorId,productId);
+var device = new HID.HID(vendorId,productId);
 
 function createWindow(){
     //Crea la ventana del navegador
@@ -46,7 +46,7 @@ app.on('ready', createWindow)
 
 //Cuando todas las ventanas han sido cerradas
 app.on('window-all-closed', () => {
-    //device.close()
+    device.close()
     if (process.platform !== 'darwin'){
         app.quit();
     }
