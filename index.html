@@ -1,12 +1,130 @@
+<style>
+    @media print {
+
+        @page {
+            font-family: 'Fake Receipt';
+            font-size: small;
+            font-stretch: condensed;
+            margin: 0.5cm;
+        }
+
+        body {
+            font-family: 'Fake Receipt';
+            font-size: small;
+            font-stretch: condensed;
+            page-break-inside: avoid;
+        }
+
+        td {
+            font-family: 'Fake Receipt';
+            font-size: small;
+            font-stretch: condensed;
+        }
+
+        th {
+            font-family: 'Fake Receipt';
+            font-size: small;
+            font-stretch: condensed;
+        }
+
+        h1 {
+            page-break-after: avoid;
+            page-break-inside: avoid;
+            page-break-before: avoid;
+            font-size: small;
+            font-stretch: condensed;
+            font-family: 'Fake Receipt';
+        }
+    }
+</style>
 <html>
-    <head>
-        <meta charset="UTF-8"/>
-        <title>Barcodes!</title>
-    </head>
-    <body>
-        <h1>Barcodes!</h1>
-        Estamos usando node <script>document.write(process.versions.node)</script>,
-        Chrome <script>document.write(process.versions.chrome)</script>,
-        y Electron <script>document.write(process.versions.electron)</script>.
-    </body>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Barcodes!</title>
+</head>
+
+<body>
+    <h1>Barcodes!</h1>
+    <br />
+    <table>
+        <tr>
+            <td style="text-align: center">Arquitectos e Ingenieros de Tecnolog&iacute;a</td>
+        </tr>
+        <tr>
+            <td style="text-align: center">636528-5</td>
+        </tr>
+        <tr>
+            <td style="text-align: center">Diagonal 6 12-42, zona 10 Edif. Design Center</td>
+        </tr>
+    </table>
+    <br />
+    <table>
+        <tr>
+            <td>Serie:</td>
+            <td>ABC No. 46688</td>
+        </tr>
+        <tr>
+            <td>Fecha:</td>
+            <td>23-01-2019</td>
+        </tr>
+        <tr>
+            <td>Nit:</td>
+            <td>2384660-5</td>
+        </tr>
+        <tr>
+            <td>Nombre:</td>
+            <td>Juan Rodr&iacute;guez</td>
+        </tr>
+    </table>
+    <br />
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Descripción</th>
+                <th style="text-align: right">Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0221239</td>
+                <td>Coca-cola 2.5L</td>
+                <td style="text-align: right">20.00</td>
+            </tr>
+            <tr>
+                <td>5269932</td>
+                <td>Televisor Samsung 42 pulg.</td>
+                <td style="text-align: right">3,300.00</td>
+            </tr>
+            <tr>
+                <td>9561239</td>
+                <td>Coca-cola 350ml</td>
+                <td style="text-align: right">5.00</td>
+            </tr>
+            <tr>
+                <td>0221239</td>
+                <td>Agua Pura Salvavidas 5 gal.</td>
+                <td style="text-align: right">16.00</td>
+            </tr>
+        </tbody>
+    </table>
+    <br />
+    <table>
+        <tr>
+            <td style="text-align: center">Resoluci&oacute;n 5699888 de fecha 21/01/2019 Serie 5642 de la 4 a la 5
+                Resoluci&oacute;n vence 20/01/2020</td>
+        </tr>
+        <tr>
+            <td style="text-align: center">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="text-align: center">Gracias por su Compra</td>
+        </tr>
+        <tr>
+            <td style="text-align: center">Vuelva Pronto</td>
+        </tr>
+    </table>
+</body>
+
 </html>

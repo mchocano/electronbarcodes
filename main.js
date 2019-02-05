@@ -8,7 +8,7 @@ let vendorId = 1504
 let productId = 4864
 let barcodeFound = null;
 
-var device = new HID.HID(vendorId,productId);
+//var device = new HID.HID(vendorId,productId);
 
 function createWindow(){
     //Crea la ventana del navegador
@@ -22,6 +22,8 @@ function createWindow(){
     })
     var menu = Menu.buildFromTemplate(menuItems)
     Menu.setApplicationMenu(menu)
+
+    console.log(mainWindow.webContents.getPrinters())
 }
 
 function receiveBarcode(data){
@@ -44,7 +46,7 @@ app.on('ready', createWindow)
 
 //Cuando todas las ventanas han sido cerradas
 app.on('window-all-closed', () => {
-    device.close()
+    //device.close()
     if (process.platform !== 'darwin'){
         app.quit();
     }
@@ -66,6 +68,13 @@ const menuItems = [
                 click() {
                     startBarcodeScanner()
                 }
+            },
+            {
+                label: 'Imprimir',
+                click(item, focusedWindow) {
+                    focusedWindow.webContents.print({silent: true}, (success) => {})
+                },
+                accelerator: 'CmdOrCtrl+P'
             },
             {
                 label: 'Salir',
